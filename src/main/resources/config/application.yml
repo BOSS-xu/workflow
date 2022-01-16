@@ -1,0 +1,48 @@
+mybatis:
+  mapper-locations: classpath:com/rzon/workflow/mapper/*.xml
+  type-aliases-package: com.rzon.workflow.model
+  type-handlers-package: com.rzon.workflow.config.mybatis
+  configuration:
+    database-id: ${workflow.datasource.type}
+    safe-result-handler-enabled: false
+
+server:
+  port: ${workflow.port}
+  tomcat:
+    max-http-post-size: -1
+    basedir: ${workflow.workspace}/server-base
+  servlet:
+    context-path: /Workflow
+    
+spring:
+  profiles:
+    active: advanced
+  flyway:
+    locations: classpath:db/migration/oracle
+  cache:
+    cache-names:
+      - categoryCache
+      - standardUnitCache
+    ehcache:
+      config: classpath:config/ehcache.xml 
+  servlet:
+    multipart:
+      max-file-size: -1
+      max-request-size: -1
+  elasticsearch:
+    bboss:
+      elasticUser: ${workflow.elasticsearch.user}
+      elasticPassword: ${workflow.elasticsearch.password}
+      elasticsearch:
+        rest:
+          hostNames: ${workflow.elasticsearch.address}
+        showTemplate: false
+  autoconfigure:
+      exclude: org.springframework.boot.autoconfigure.data.redis.RedisAutoConfiguration
+
+logging:
+  config: classpath:config/log4j2.yml
+
+workflow:
+  workspace: workflow-workspace
+  # workflow-tomcat-basedir = workflow-workspace/server-base

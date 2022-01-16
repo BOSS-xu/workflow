@@ -1,0 +1,240 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE module PUBLIC "-//Puppy Crawl//DTD Check Configuration 1.3//EN" "http://www.puppycrawl.com/dtds/configuration_1_3.dtd">
+
+<!-- 详细内容请看https://wiki.fulongtech.cn/pages/viewpage.action?pageId=111871537 -->
+<module name="Checker">
+
+    <module name="TreeWalker">
+    
+        <module name="SuppressWarningsHolder"/>
+
+        <module name="AvoidNestedBlocks"/>
+
+        <module name="EmptyBlock"/>
+
+        <module name="EmptyCatchBlock"/>
+
+        <module name="LeftCurly"/>
+
+        <module name="NeedBraces"/>
+
+        <module name="RightCurly"/>
+
+        <module name="FinalClass"/>
+
+        <module name="HideUtilityClassConstructor"/>
+
+        <module name="InnerTypeLast"/>
+
+        <module name="InterfaceIsType"/>
+
+        <module name="MutableException"/>
+
+        <module name="OneTopLevelClass"/>
+
+        <module name="ThrowsCount"/>
+
+        <module name="VisibilityModifier">
+            <property name="protectedAllowed" value="true"/>
+        </module>
+
+        <module name="CovariantEquals"/>
+
+        <module name="DeclarationOrder"/>
+
+        <module name="DefaultComesLast"/>
+
+        <module name="EmptyStatement"/>
+
+        <module name="EqualsAvoidNull"/>
+
+        <module name="EqualsHashCode"/>
+
+        <module name="ExplicitInitialization"/>
+
+        <module name="FallThrough"/>
+
+        <module name="FinalLocalVariable"/>
+
+        <module name="IllegalCatch">
+            <property name="illegalClassNames"
+                value="java.lang.Throwable, RuntimeException, Error, Throwable, java.lang.Error, java.lang.RuntimeException" />
+        </module>
+
+        <module name="IllegalInstantiation">
+            <property name="classes" value="java.lang.Boolean" />
+        </module>
+
+        <module name="IllegalThrows"/>
+
+        <module name="IllegalToken"/>
+
+        <module name="InnerAssignment"/>
+
+        <module name="MagicNumber"/>
+
+        <module name="MissingSwitchDefault"/>
+
+        <module name="ModifiedControlVariable"/>
+
+        <module name="MultipleVariableDeclarations"/>
+
+        <module name="NestedForDepth"/>
+
+        <module name="NestedIfDepth"/>
+
+        <module name="NestedTryDepth"/>
+
+        <module name="NoClone"/>
+
+        <module name="NoFinalizer"/>
+
+        <module name="OneStatementPerLine"/>
+
+        <module name="OverloadMethodsDeclarationOrder"/>
+
+        <module name="PackageDeclaration"/>
+
+        <module name="ParameterAssignment"/>
+
+        <module name="RequireThis">
+            <property name="checkMethods" value="false"/>
+        </module> 
+
+        <module name="SimplifyBooleanExpression"/>
+
+        <module name="SimplifyBooleanReturn"/>
+
+        <module name="StringLiteralEquality"/>
+
+        <module name="UnnecessaryParentheses"/>
+
+        <module name="VariableDeclarationUsageDistance"/>
+
+        <module name="IllegalImport"/>
+
+        <module name="RedundantImport"/>
+
+        <module name="UnusedImports"/>
+
+        <module name="CyclomaticComplexity">
+            <property name="switchBlockAsSingleDecisionPoint" value="true"/>
+        </module>
+
+        <module name="ArrayTypeStyle"/>
+
+        <module name="CommentsIndentation"/>
+
+        <module name="FinalParameters"/>
+
+        <module name="Indentation"/>
+
+        <module name="OuterTypeFilename"/>
+
+        <module name="TodoComment">
+            <property name="format" value="TODO"/>
+            <property name="severity" value="warning"/>
+        </module>
+
+        <module name="TrailingComment"/>
+
+        <module name="UpperEll"/>
+
+        <module name="ModifierOrder"/>
+
+        <module name="RedundantModifier"/>
+
+        <module name="AbbreviationAsWordInName"/>
+
+        <module name="CatchParameterName"/>
+
+        <module name="ClassTypeParameterName"/>
+
+        <module name="ConstantName"/>
+
+        <module name="InterfaceTypeParameterName"/>
+
+        <module name="LocalFinalVariableName"/>
+
+        <module name="LocalVariableName"/>
+
+        <module name="MemberName"/>
+
+        <module name="MethodName"/>
+
+        <module name="MethodTypeParameterName"/>
+        
+        <module name="PackageName">
+            <property name="format" value="^[a-z0-9]+(\.[a-z0-9]*)*$"/>
+        </module>
+
+        <module name="ParameterName"/>
+
+        <module name="StaticVariableName"/>
+
+        <module name="TypeName"/>
+
+        <module name="RegexpSinglelineJava">
+            <property name="format" value="System\.out\.print"/>
+            <property name="ignoreComments" value="true"/>
+        </module>
+
+        <module name="ExecutableStatementCount">
+            <property name="max" value="50"/>
+        </module>
+
+        <module name="LineLength">
+            <property name="max" value="120"/>
+        </module>
+
+        <module name="MethodLength">
+            <property name="max" value="50"/>
+        </module>
+
+        <module name="OuterTypeNumber"/>
+
+        <module name="ParameterNumber"/>
+
+        <module name="EmptyForInitializerPad"/>
+
+        <module name="EmptyForIteratorPad"/>
+
+        <module name="EmptyLineSeparator"/>
+
+        <module name="GenericWhitespace"/>
+
+        <module name="MethodParamPad"/>
+
+        <module name="NoLineWrap"/>
+
+        <module name="NoWhitespaceAfter"/> 
+
+        <module name="NoWhitespaceBefore"/>
+
+        <module name="OperatorWrap"/>
+
+        <module name="ParenPad"/>
+
+        <module name="SeparatorWrap">
+            <property name="tokens" value="COMMA"/>
+        </module>
+
+        <module name="TypecastParenPad"/>
+
+        <module name="WhitespaceAfter"/>
+
+        <module name="WhitespaceAround"/>
+
+    </module>  
+
+    <module name="FileTabCharacter"/>
+
+    <module name="UniqueProperties"/>
+
+    <!-- 可以抑制警告，路径为抑制警告文件所在位置   -->
+    <module name="SuppressionFilter">
+        <property name="file" value="src/main/resources/checkstyle/suppressions.xml"/>
+        <property name="optional" value="false"/>
+    </module>
+   
+</module>

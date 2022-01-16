@@ -1,0 +1,9 @@
+{
+  "name": "Workflow API",
+  "version": "0.1.0",
+  "description": "Workflow API 0.1.0",
+  "title": "Workflow API 0.1.0",
+  "template": {
+    "withCompare": false
+  }
+}

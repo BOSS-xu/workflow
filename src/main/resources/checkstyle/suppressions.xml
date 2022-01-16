@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE suppressions SYSTEM "suppressions_1_2.dtd">
+
+<suppressions>
+
+    <suppress checks="HideUtilityClassConstructor" files="[Application.java]"/>
+
+</suppressions>
