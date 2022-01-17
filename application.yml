@@ -9,14 +9,12 @@
 workflow:
   # Workflow系统数据库相关配置
   datasource:
-    #   数据库类型，目前支持oracle/sqlserver
+    #   数据库类型，目前支持oracle
     type: oracle
     #   数据库url配置
     #    oracle：jdbc:oracle:thin:@//localhost:1521/orcl
-    #    sqlserver：jdbc:sqlserver://localhost:1433;databaseName=
-    #url: jdbc:oracle:thin:@//10.0.6.82:1521/orcl
     url: jdbc:oracle:thin:@//localhost:1521/orcl
-    username: aims
+    username: aims2
     password: root
       #   连接池配置，如有要求自行修改
     minimum-idle: 10

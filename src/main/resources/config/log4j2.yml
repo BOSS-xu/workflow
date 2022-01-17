@@ -6,7 +6,7 @@ Configuration:
     - name: log.path
       value: logs
     - name: project.name
-      value: aims
+      value: workflow
 
   Appenders:
     Console:
