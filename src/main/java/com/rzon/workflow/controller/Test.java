@@ -1,10 +1,21 @@
 package com.rzon.workflow.controller;
 
+import com.rzon.workflow.model.TestModel;
+import com.rzon.workflow.service.TestService;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import java.util.List;
+
 @RestController
+@RequestMapping("/test")
 public class Test {
+
+    @Autowired
+    TestService testService;
+
     /**
      * @api {get} /Test/{test} 测试API
      * @apiPermission 仓库管理
@@ -24,7 +35,10 @@ public class Test {
      * }
      */
     @GetMapping("/test")
-    public void test() {
+    public List<TestModel> test() {
+        System.out.println("tttttttttttt");
 
+        List<TestModel> list = testService.list();
+        return list;
     }
 }

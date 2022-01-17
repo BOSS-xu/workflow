@@ -14,7 +14,7 @@ workflow:
     #   数据库url配置
     #    oracle：jdbc:oracle:thin:@//localhost:1521/orcl
     url: jdbc:oracle:thin:@//localhost:1521/orcl
-    username: aims2
+    username: workflow
     password: root
       #   连接池配置，如有要求自行修改
     minimum-idle: 10
